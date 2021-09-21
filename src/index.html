@@ -21,21 +21,21 @@
               <label for="bill">Bill</label>
               <label for="bill" class="zero" id="zero1">Can't be zero</label>
             </div>
-            <input type="text" id="bill-price">
+            <input type="text" id="bill-price" onkeyup="getBillPrice()">
           </form>
         </div>
         <div class="tip">
           <div class="tip-container">
             <p>Select tip %</p>
             <div class="btn-1">
-              <button id="tip1" value="5">5%</button>
-              <button id="tip2" value="10">10%</button>
-              <button id="tip3" value="15">15%</button>
+              <button class="button" id="tip1" value="5" onclick="selectTip(id)">5%</button>
+              <button class="button" id="tip2" value="10" onclick="selectTip(id)">10%</button>
+              <button class="button" id="tip3" value="15" onclick="selectTip(id)">15%</button>
             </div>
             <div class="btn-2">
-              <button id="tip4" value="25">25%</button>
-              <button id="tip5" value="50">50%</button>
-              <input type="text" placeholder="Custom" id="tip6">
+              <button class="button" id="tip4" value="25" onclick="selectTip(id)">25%</button>
+              <button class="button" id="tip5" value="50" onclick="selectTip(id)">50%</button>
+              <input type="text" placeholder="Custom" id="tip6" onkeyup="customTip(id)">
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
               <label for="people">Number of people</label>
               <label for="people" class="zero" id="zero2">Can't be zero</label>
             </div>
-            <input type="text" id="num-people" onkeyup="getBillPrice()">
+            <input type="text" id="num-people" onkeyup="getNumberOfPeople()">
           </form>
         </div>
       </div>
@@ -63,10 +63,10 @@
               <span class="total-amount-text">Total</span>
               <span class="person">/ person</span>
             </div>
-            <span class="price">$0.00</span>
+            <span class="price" id="price">$0.00</span>
           </div>
         </div>
-        <button class="btn">RESET</button>
+        <button class="btn" id="reset-btn" onclick="reset()">RESET</button>
       </div>
     </div>
   </div>
